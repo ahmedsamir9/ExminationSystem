@@ -1,4 +1,3 @@
-
 create table Userr(
 	id int primary key identity,
 	firstName nvarchar(20),
@@ -8,7 +7,7 @@ create table Userr(
 	passKey nvarchar(15) not null,
 	sex nvarchar(1),
 	userType nvarchar(1),
-	depID nvarchar(5) ,
+	depID nvarchar(5)
 	---ADD RELATION BETWEEN DEP AND USER USING WIZARD Y NAGM 
 )
 create table Student(
@@ -57,21 +56,28 @@ create table Std_Crs(
 create table Question(
 	questionID int primary key identity ,
 	questionText nvarchar(30) not null,
-	answer nvarchar(20) not null,
+	answer nvarchar(1) not null,
 	qType nvarchar (3) not null--mcq ,T/F
 )
 create table Choices(
-	choiceID int identity,
-	q_ID int ,
+	q_ID int FOREIGN KEY REFERENCES Question(questionID),
 	choice1 nvarchar(20) not null,
-	constraint c5 foreign key(q_ID) 
-	references Question(questionID),
-	primary key (choiceID,q_ID)
+	choice2 nvarchar(20) not null,
+	choice3 nvarchar(20) not null,
+	choice4 nvarchar(20) not null,
+	PRIMARY KEY (choice1, q_ID)
 )
-
-
-
-
+CREATE TABLE Exam(
+	Exam_ID INT PRIMARY KEY IDENTITY,
+	Exam_Date Date,
+)
+CREATE TABLE St_Ex_Ch(
+	Std_ID INT FOREIGN KEY REFERENCES Student(stuID),
+	Exam_ID INT FOREIGN KEY REFERENCES Exam(Exam_ID),
+	questionID INT FOREIGN KEY REFERENCES Question(questionID),
+	St_Answer nvarchar(1),
+	PRIMARY KEY (Std_ID, Exam_ID, questionID)
+)
 
 
 
