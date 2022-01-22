@@ -9,7 +9,7 @@ create table Userr(
 	sex nvarchar(1),
 	userType nvarchar(1),
 	depID nvarchar(5) ,
-	constraint c1 foreign key(depID) references Department(depID)
+	---ADD RELATION BETWEEN DEP AND USER USING WIZARD Y NAGM 
 )
 create table Student(
 	stuID int primary key,
@@ -63,7 +63,7 @@ create table Question(
 create table Choices(
 	choiceID int identity,
 	q_ID int ,
-	choice nvarchar(20) not null,
+	choice1 nvarchar(20) not null,
 	constraint c5 foreign key(q_ID) 
 	references Question(questionID),
 	primary key (choiceID,q_ID)
