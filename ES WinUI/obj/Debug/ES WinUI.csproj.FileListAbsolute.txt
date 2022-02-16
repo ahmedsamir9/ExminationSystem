@@ -1,0 +1,47 @@
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\Examination System.exe.config
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\Examination System.exe
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\Examination System.pdb
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Docking.dll
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\MaterialSkin.dll
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+G:\ITI\C#\Day12\Examination System\Examination System\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+G:\ITI\C#\Day12\Examination System\Examination System\obj\Debug\ES WinUI.csproj.SuggestedBindingRedirects.cache
+G:\ITI\C#\Day12\Examination System\Examination System\obj\Debug\Examination_System.Login.resources
+G:\ITI\C#\Day12\Examination System\Examination System\obj\Debug\Examination_System.Properties.Resources.resources
+G:\ITI\C#\Day12\Examination System\Examination System\obj\Debug\Examination_System.Register.resources
+G:\ITI\C#\Day12\Examination System\Examination System\obj\Debug\ES WinUI.csproj.GenerateResource.cache
+G:\ITI\C#\Day12\Examination System\Examination System\obj\Debug\ES WinUI.csproj.CoreCompileInputs.cache
+G:\ITI\C#\Day12\Examination System\Examination System\obj\Debug\ES WinUI.csproj.CopyComplete
+G:\ITI\C#\Day12\Examination System\Examination System\obj\Debug\Examination System.exe
+G:\ITI\C#\Day12\Examination System\Examination System\obj\Debug\Examination System.pdb
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\Examination System.exe.config
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\Examination System.exe
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\Examination System.pdb
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Docking.dll
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\MaterialSkin.dll
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+G:\ITI\C#\Day12\Examination System\ES WinUI\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\ES WinUI.csproj.AssemblyReference.cache
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\ES WinUI.csproj.SuggestedBindingRedirects.cache
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\Examination_System.Login.resources
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\Examination_System.Properties.Resources.resources
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\Examination_System.Register.resources
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\ES WinUI.csproj.GenerateResource.cache
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\ES WinUI.csproj.CoreCompileInputs.cache
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\ES WinUI.csproj.CopyComplete
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\Examination System.exe
+G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\Examination System.pdb

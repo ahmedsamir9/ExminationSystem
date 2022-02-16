@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "09f4abb6-3a55-4276-b56d-7e5a60467361": {
+      "ProjectGuid": "09f4abb6-3a55-4276-b56d-7e5a60467361",
+      "DisplayName": "ES WinUI1",
+      "ColorIndex": 0
+    },
+    "a34d4487-c1a8-4c0f-8e18-20b87535ae71": {
+      "ProjectGuid": "a34d4487-c1a8-4c0f-8e18-20b87535ae71",
+      "DisplayName": "1ES WinUI",
+      "ColorIndex": 1
+    },
+    "1917fafc-665e-43f1-9422-c462cad45dde": {
+      "ProjectGuid": "1917fafc-665e-43f1-9422-c462cad45dde",
+      "DisplayName": "ES UI",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "d3e08883-08f4-4d5b-83a2-a0f36e5fc40f": {
+      "ProjectGuid": "d3e08883-08f4-4d5b-83a2-a0f36e5fc40f",
+      "DisplayName": "ES WinUI",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
