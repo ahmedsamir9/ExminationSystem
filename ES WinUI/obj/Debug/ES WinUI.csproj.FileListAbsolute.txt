@@ -45,3 +45,27 @@ G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\ES WinUI.csproj.CoreCompil
 G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\ES WinUI.csproj.CopyComplete
 G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\Examination System.exe
 G:\ITI\C#\Day12\Examination System\ES WinUI\obj\Debug\Examination System.pdb
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\Examination System.exe.config
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\Examination System.exe
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\Examination System.pdb
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Docking.dll
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\MaterialSkin.dll
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csprojAssemblyReference.cache
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Login.resources
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Properties.Resources.resources
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Register.resources
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.GenerateResource.cache
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.CopyComplete
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination System.exe
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination System.pdb
+C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentDetails.resources
