@@ -80,7 +80,7 @@
             // 
             this.tbFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFirstName.Depth = 0;
-            this.tbFirstName.Font = new System.Drawing.Font("Roboto", 12F);
+            this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.tbFirstName.Hint = "First Name";
             this.tbFirstName.Location = new System.Drawing.Point(55, 114);
             this.tbFirstName.MaxLength = 50;

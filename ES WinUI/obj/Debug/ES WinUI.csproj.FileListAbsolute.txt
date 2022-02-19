@@ -72,3 +72,4 @@ C:\Users\ahmed\Source\Repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_Sy
 C:\Users\ahmed\source\repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentMenu.resources
 C:\Users\ahmed\source\repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Exam.resources
 C:\Users\ahmed\source\repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentGrades.resources
+C:\Users\ahmed\source\repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentForms.ChooseExam.resources

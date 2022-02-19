@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Examination_System.StudentForms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
@@ -47,8 +48,7 @@ namespace Examination_System
 
         private void BtnTakeExam_Click(object sender, EventArgs e)
         {
-            Exam examFrm = new Exam();
-            examFrm.Show();
+            new ChooseExam().Show();
             Hide();
         }
 

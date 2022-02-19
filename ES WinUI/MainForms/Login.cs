@@ -94,13 +94,11 @@ namespace Examination_System
 
         private void Login_Load(object sender, EventArgs e)
         {
-            //this.textBox2.Size = new System.Drawing.Size(142, 27);
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Register registerFrm = new Register();
-            registerFrm.Show();
+            new Register().Show();
             Hide();
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Examination_System.StudentForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,10 +15,9 @@ namespace Examination_System
         [STAThread]
         static void Main()
         {
-            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new ChooseExam());
         }
 
 

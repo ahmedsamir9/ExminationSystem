@@ -8,7 +8,7 @@ namespace Examination_System
 {
     public static class User
     {
-        public static int UserID { get; set; }
+        public static int UserID { get; set; } = 3;
         public static string UserType { get; set; }
     }
 }
