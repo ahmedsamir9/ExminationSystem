@@ -6,18 +6,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
 namespace Examination_System
 {
-    public partial class Register : MaterialForm
+    public partial class Exam : MaterialForm
     {
-        public Register()
+        public Exam()
         {
             InitializeComponent();
-
+            InitForm();
+        }
+        private void InitForm()
+        {
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
@@ -30,6 +32,9 @@ namespace Examination_System
             );
         }
 
-        private void Register_Load(object sender, EventArgs e) { }
+        private void Exam_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -44,15 +44,10 @@ namespace Examination_System
         } 
         private void StudentDetails_Load(object sender, EventArgs e)
         {
-            sqlCmd = new SqlCommand(
-                "SELECT * FROM Userr U INNER JOIN Student S ON U.ID = 3 AND U.id = S.stuID",
-                sqlCn
-            );
-
             sqlCmd.Parameters.Clear();
             sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.CommandText = "GetStudentDEtails";
-            sqlCmd.Parameters.AddWithValue("st_id", 3); //edit 3 with the id of the current Student.
+            sqlCmd.Parameters.AddWithValue("st_id", User.UserID); 
 
 
             sqlCn.Open();
@@ -77,7 +72,8 @@ namespace Examination_System
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-            //try {
+            try
+            {
                 sqlCmd.Parameters.Clear();
                 sqlCmd.CommandText = "UpdateUser";
 
@@ -93,11 +89,12 @@ namespace Examination_System
                 sqlCmd.ExecuteNonQuery();
                 sqlCn.Close();
 
-            //}
-            //catch (Exception Ex) {
-                //MessageBox.Show(Ex.Message.ToString());
-                //sqlCn.Close();
-            //}
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message.ToString());
+                sqlCn.Close();
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Examination_System
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -14,9 +14,15 @@ namespace Examination_System
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
         }
+
+
+
+        public static int userID;
+
     }
 }

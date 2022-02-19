@@ -37,7 +37,7 @@
             this.tbSex = new MaterialSkin.Controls.MaterialTextBox();
             this.tbPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.tbUsername = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnRegister = new MaterialSkin.Controls.MaterialButton();
+            this.btnUpdate = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // tbID
@@ -168,6 +168,7 @@
             // 
             this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUsername.Depth = 0;
+            this.tbUsername.Enabled = false;
             this.tbUsername.Font = new System.Drawing.Font("Roboto", 12F);
             this.tbUsername.Hint = "Username";
             this.tbUsername.Location = new System.Drawing.Point(358, 248);
@@ -179,31 +180,31 @@
             this.tbUsername.TabIndex = 10;
             this.tbUsername.Text = "";
             // 
-            // btnRegister
+            // btnUpdate
             // 
-            this.btnRegister.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRegister.Depth = 0;
-            this.btnRegister.DrawShadows = true;
-            this.btnRegister.HighEmphasis = true;
-            this.btnRegister.Icon = null;
-            this.btnRegister.Location = new System.Drawing.Point(402, 468);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnRegister.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(95, 36);
-            this.btnRegister.TabIndex = 11;
-            this.btnRegister.Text = "     UPDATE      ";
-            this.btnRegister.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnRegister.UseAccentColor = false;
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
+            this.btnUpdate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnUpdate.Depth = 0;
+            this.btnUpdate.DrawShadows = true;
+            this.btnUpdate.HighEmphasis = true;
+            this.btnUpdate.Icon = null;
+            this.btnUpdate.Location = new System.Drawing.Point(402, 468);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnUpdate.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(95, 36);
+            this.btnUpdate.TabIndex = 11;
+            this.btnUpdate.Text = "     UPDATE      ";
+            this.btnUpdate.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnUpdate.UseAccentColor = false;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // StudentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 542);
-            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.tbGYear);
             this.Controls.Add(this.tbDeptID);
@@ -213,7 +214,9 @@
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.tbID);
+            this.MaximizeBox = false;
             this.Name = "StudentDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentDetails";
             this.Load += new System.EventHandler(this.StudentDetails_Load);
             this.ResumeLayout(false);
@@ -232,6 +235,6 @@
         private MaterialSkin.Controls.MaterialTextBox tbSex;
         private MaterialSkin.Controls.MaterialTextBox tbPassword;
         private MaterialSkin.Controls.MaterialTextBox tbUsername;
-        private MaterialSkin.Controls.MaterialButton btnRegister;
+        private MaterialSkin.Controls.MaterialButton btnUpdate;
     }
 }

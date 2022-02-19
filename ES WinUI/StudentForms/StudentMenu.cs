@@ -12,12 +12,15 @@ using MaterialSkin.Controls;
 
 namespace Examination_System
 {
-    public partial class Login : MaterialForm
+    public partial class StudentMenu : MaterialForm
     {
-        public Login()
+        public StudentMenu()
         {
             InitializeComponent();
-
+            InitForm();
+        }
+        private void InitForm()
+        {
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
@@ -30,18 +33,29 @@ namespace Examination_System
             );
         }
 
-        private void btnLogin_Click(object sender, EventArgs e) { }
-
-        private void Login_Load(object sender, EventArgs e)
+        private void StudentMenu_Load(object sender, EventArgs e)
         {
-            //this.textBox2.Size = new System.Drawing.Size(142, 27);
+
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void BtnShowDetails_Click(object sender, EventArgs e)
         {
-            Register registerFrm = new Register();
+            StudentDetails studentDetailsFrm = new StudentDetails();
+            studentDetailsFrm.Show();
+            Hide();
+        }
 
-            registerFrm.Show();
+        private void BtnTakeExam_Click(object sender, EventArgs e)
+        {
+            Exam examFrm = new Exam();
+            examFrm.Show();
+            Hide();
+        }
+
+        private void BtnShowGrades_Click(object sender, EventArgs e)
+        {
+            StudentGrades studentGradesFrm = new StudentGrades();
+            studentGradesFrm.Show();
             Hide();
         }
     }

@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.textBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbUsername = new MaterialSkin.Controls.MaterialTextBox();
             this.btnLogin = new MaterialSkin.Controls.MaterialButton();
             this.btnRegister = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.tbPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // tbUsername
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Depth = 0;
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 12F);
-            this.textBox2.Hint = "Username";
-            this.textBox2.Location = new System.Drawing.Point(22, 104);
-            this.textBox2.MaxLength = 50;
-            this.textBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.textBox2.Multiline = false;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(400, 50);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "";
+            this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUsername.Depth = 0;
+            this.tbUsername.Font = new System.Drawing.Font("Roboto", 12F);
+            this.tbUsername.Hint = "Username";
+            this.tbUsername.Location = new System.Drawing.Point(22, 104);
+            this.tbUsername.MaxLength = 50;
+            this.tbUsername.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbUsername.Multiline = false;
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(400, 50);
+            this.tbUsername.TabIndex = 1;
+            this.tbUsername.Text = "";
             // 
             // btnLogin
             // 
@@ -104,21 +104,21 @@
             this.materialLabel3.TabIndex = 6;
             this.materialLabel3.Text = "Don\'t Have an Account?";
             // 
-            // materialTextBox1
+            // tbPassword
             // 
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.materialTextBox1.Hint = "Password";
-            this.materialTextBox1.Location = new System.Drawing.Point(22, 211);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Password = true;
-            this.materialTextBox1.Size = new System.Drawing.Size(400, 50);
-            this.materialTextBox1.TabIndex = 7;
-            this.materialTextBox1.Text = "";
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassword.Depth = 0;
+            this.tbPassword.Font = new System.Drawing.Font("Roboto", 12F);
+            this.tbPassword.Hint = "Password";
+            this.tbPassword.Location = new System.Drawing.Point(22, 211);
+            this.tbPassword.MaxLength = 50;
+            this.tbPassword.MouseState = MaterialSkin.MouseState.OUT;
+            this.tbPassword.Multiline = false;
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Password = true;
+            this.tbPassword.Size = new System.Drawing.Size(400, 50);
+            this.tbPassword.TabIndex = 7;
+            this.tbPassword.Text = "";
             // 
             // pictureBox1
             // 
@@ -137,15 +137,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 542);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.materialTextBox1);
+            this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbUsername);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
             this.Sizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -155,11 +156,11 @@
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialTextBox textBox2;
+        private MaterialSkin.Controls.MaterialTextBox tbUsername;
         private MaterialSkin.Controls.MaterialButton btnLogin;
         private MaterialSkin.Controls.MaterialButton btnRegister;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialTextBox tbPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
