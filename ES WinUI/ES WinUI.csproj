@@ -64,6 +64,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InstructorForms\CouresFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\CouresFrom.Designer.cs">
+      <DependentUpon>CouresFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForms\InstructorDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\InstructorDetails.Designer.cs">
+      <DependentUpon>InstructorDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForms\InstructorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\InstructorMenu.Designer.cs">
+      <DependentUpon>InstructorMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentForms\ChooseExam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +127,15 @@
       <DependentUpon>StudentMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="InstructorForms\CouresFrom.resx">
+      <DependentUpon>CouresFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\InstructorDetails.resx">
+      <DependentUpon>InstructorDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\InstructorMenu.resx">
+      <DependentUpon>InstructorMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentForms\ChooseExam.resx">
       <DependentUpon>ChooseExam.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,5 +180,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

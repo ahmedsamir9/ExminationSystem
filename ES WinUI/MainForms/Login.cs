@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Examination_System.InstructorForms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
@@ -57,8 +58,8 @@ namespace Examination_System
             outputPara = new SqlParameter("isAuth", SqlDbType.Int);
             outputPara.Direction = ParameterDirection.Output;
             sqlCmd.Parameters.Add(outputPara);
-
-            sqlCn.Open();
+            if (sqlCn.State != ConnectionState.Open)
+                 sqlCn.Open();
             sqlCmd.ExecuteNonQuery();
 
             if(outputPara.Value.ToString() == "1")
@@ -73,23 +74,28 @@ namespace Examination_System
                 sqlCmd.Parameters.Add(userTypeOutputPara);
 
                 sqlCmd.ExecuteNonQuery();
-
+                sqlCn.Close();
                 User.UserID = int.Parse(outputPara.Value.ToString());
                 User.UserType = userTypeOutputPara.Value.ToString();
 
-                if(User.UserType == "s")
+                if (User.UserType == "s")
                 {
                     StudentMenu studentMenuFrm = new StudentMenu();
                     studentMenuFrm.Show();
                 }
-
+                else if (User.UserType == "i") {
+                    InstructorMenu instructorMenu = new InstructorMenu();
+                    instructorMenu.Show();
+                }
                 Hide();
+            
             }
             else
             {
                 MessageBox.Show("The username or the password is incoorect!");
             }
-            sqlCn.Close();
+          
+           
         }
 
         private void Login_Load(object sender, EventArgs e)

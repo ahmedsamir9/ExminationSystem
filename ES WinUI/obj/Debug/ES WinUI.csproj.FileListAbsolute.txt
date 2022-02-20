@@ -73,3 +73,29 @@ C:\Users\ahmed\source\repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_Sy
 C:\Users\ahmed\source\repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Exam.resources
 C:\Users\ahmed\source\repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentGrades.resources
 C:\Users\ahmed\source\repos\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentForms.ChooseExam.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\bin\Debug\Examination System.exe.config
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\bin\Debug\Examination System.exe
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\bin\Debug\Examination System.pdb
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\bin\Debug\MaterialSkin.dll
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\ES WinUI.csproj.AssemblyReference.cache
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.StudentForms.ChooseExam.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.Exam.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.Login.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.Properties.Resources.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.Register.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.StudentDetails.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.StudentGrades.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.StudentMenu.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\ES WinUI.csproj.GenerateResource.cache
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\ES WinUI.csproj.CoreCompileInputs.cache
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\ES WinUI.csproj.CopyComplete
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination System.exe
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination System.pdb
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.InstructorForms.InstructorMenu.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.InstructorForms.InstructorDetails.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBfinal\ES WinUI\obj\Debug\Examination_System.InstructorForms.CouresFrom.resources
