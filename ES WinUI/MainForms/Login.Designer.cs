@@ -65,7 +65,7 @@
             this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(89, 36);
-            this.btnLogin.TabIndex = 4;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "       LOGIN       ";
             this.btnLogin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLogin.UseAccentColor = false;
@@ -84,7 +84,7 @@
             this.btnRegister.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(106, 36);
-            this.btnRegister.TabIndex = 5;
+            this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "     REGISTER     ";
             this.btnRegister.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnRegister.UseAccentColor = false;
@@ -117,7 +117,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Password = true;
             this.tbPassword.Size = new System.Drawing.Size(400, 50);
-            this.tbPassword.TabIndex = 7;
+            this.tbPassword.TabIndex = 2;
             this.tbPassword.Text = "";
             // 
             // pictureBox1
@@ -133,6 +133,7 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 542);

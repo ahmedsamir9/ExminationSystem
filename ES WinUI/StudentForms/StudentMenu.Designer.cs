@@ -35,16 +35,17 @@
             // 
             // btnShowDetails
             // 
+            this.btnShowDetails.AutoSize = false;
             this.btnShowDetails.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnShowDetails.Depth = 0;
             this.btnShowDetails.DrawShadows = true;
             this.btnShowDetails.HighEmphasis = true;
             this.btnShowDetails.Icon = null;
-            this.btnShowDetails.Location = new System.Drawing.Point(370, 196);
+            this.btnShowDetails.Location = new System.Drawing.Point(345, 196);
             this.btnShowDetails.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnShowDetails.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnShowDetails.Name = "btnShowDetails";
-            this.btnShowDetails.Size = new System.Drawing.Size(125, 36);
+            this.btnShowDetails.Size = new System.Drawing.Size(205, 50);
             this.btnShowDetails.TabIndex = 0;
             this.btnShowDetails.Text = "Show Details";
             this.btnShowDetails.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -54,16 +55,17 @@
             // 
             // btnTakeExam
             // 
+            this.btnTakeExam.AutoSize = false;
             this.btnTakeExam.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnTakeExam.Depth = 0;
             this.btnTakeExam.DrawShadows = true;
             this.btnTakeExam.HighEmphasis = true;
             this.btnTakeExam.Icon = null;
-            this.btnTakeExam.Location = new System.Drawing.Point(374, 277);
+            this.btnTakeExam.Location = new System.Drawing.Point(345, 277);
             this.btnTakeExam.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnTakeExam.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTakeExam.Name = "btnTakeExam";
-            this.btnTakeExam.Size = new System.Drawing.Size(125, 36);
+            this.btnTakeExam.Size = new System.Drawing.Size(205, 50);
             this.btnTakeExam.TabIndex = 1;
             this.btnTakeExam.Text = "TAKE AN EXAM";
             this.btnTakeExam.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -73,6 +75,7 @@
             // 
             // btnShowGrades
             // 
+            this.btnShowGrades.AutoSize = false;
             this.btnShowGrades.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnShowGrades.Depth = 0;
             this.btnShowGrades.DrawShadows = true;
@@ -82,7 +85,7 @@
             this.btnShowGrades.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnShowGrades.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnShowGrades.Name = "btnShowGrades";
-            this.btnShowGrades.Size = new System.Drawing.Size(167, 36);
+            this.btnShowGrades.Size = new System.Drawing.Size(205, 50);
             this.btnShowGrades.TabIndex = 2;
             this.btnShowGrades.Text = "Show Exams Grade";
             this.btnShowGrades.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -104,7 +107,6 @@
             this.Text = "StudentMenu";
             this.Load += new System.EventHandler(this.StudentMenu_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -54,7 +54,7 @@
             this.tbLastName.Multiline = false;
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(227, 50);
-            this.tbLastName.TabIndex = 13;
+            this.tbLastName.TabIndex = 2;
             this.tbLastName.Text = "";
             // 
             // btnRegister
@@ -69,7 +69,7 @@
             this.btnRegister.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(106, 36);
-            this.btnRegister.TabIndex = 11;
+            this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "     REGISTER     ";
             this.btnRegister.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnRegister.UseAccentColor = false;
@@ -80,7 +80,7 @@
             // 
             this.tbFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFirstName.Depth = 0;
-            this.tbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tbFirstName.Font = new System.Drawing.Font("Roboto", 12F);
             this.tbFirstName.Hint = "First Name";
             this.tbFirstName.Location = new System.Drawing.Point(55, 114);
             this.tbFirstName.MaxLength = 50;
@@ -88,7 +88,7 @@
             this.tbFirstName.Multiline = false;
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(227, 50);
-            this.tbFirstName.TabIndex = 9;
+            this.tbFirstName.TabIndex = 1;
             this.tbFirstName.Text = "";
             // 
             // tbEmail
@@ -104,7 +104,7 @@
             this.tbEmail.Multiline = false;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(227, 50);
-            this.tbEmail.TabIndex = 21;
+            this.tbEmail.TabIndex = 5;
             this.tbEmail.Text = "";
             // 
             // tbUsername
@@ -120,7 +120,7 @@
             this.tbUsername.Multiline = false;
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(227, 50);
-            this.tbUsername.TabIndex = 20;
+            this.tbUsername.TabIndex = 3;
             this.tbUsername.Text = "";
             // 
             // tbPassword
@@ -135,7 +135,7 @@
             this.tbPassword.Multiline = false;
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(227, 50);
-            this.tbPassword.TabIndex = 22;
+            this.tbPassword.TabIndex = 4;
             this.tbPassword.Text = "";
             // 
             // rbMale
@@ -149,7 +149,7 @@
             this.rbMale.Name = "rbMale";
             this.rbMale.Ripple = true;
             this.rbMale.Size = new System.Drawing.Size(70, 37);
-            this.rbMale.TabIndex = 26;
+            this.rbMale.TabIndex = 6;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
@@ -183,6 +183,7 @@
             // 
             // Register
             // 
+            this.AcceptButton = this.btnRegister;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 578);

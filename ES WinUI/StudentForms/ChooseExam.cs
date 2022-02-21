@@ -26,7 +26,7 @@ namespace Examination_System.StudentForms
             InitializeComponent();
 
             InitForm();
-
+            btnTakeExam.Enabled = false;
             sqlCmd = new SqlCommand();
             sqlCmd.Connection = sqlCn;
             sqlCmd.CommandType = CommandType.StoredProcedure;
@@ -75,6 +75,17 @@ namespace Examination_System.StudentForms
         private void MaterialLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CbExams_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnTakeExam.Enabled = true;
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new StudentMenu().Show();
         }
     }
 }

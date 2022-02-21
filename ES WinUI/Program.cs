@@ -1,4 +1,8 @@
-﻿using Examination_System.StudentForms;
+﻿using Examination_System.MainForms;
+using Examination_System.Reports;
+using Examination_System.Reports.GetStudentGrades;
+using Examination_System.Reports.StDetailsInDeptReport;
+using Examination_System.StudentForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +21,7 @@ namespace Examination_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChooseExam());
+            Application.Run(new Login());
         }
 
 

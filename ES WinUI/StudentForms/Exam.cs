@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Examination_System
 {
@@ -21,6 +22,9 @@ namespace Examination_System
         SqlDataAdapter DAQuestions;
         DataTable DTQuestions;
         DataRow row;
+        MaterialRadioButton [] radioButtons = new MaterialRadioButton [4];
+        bool reset = true;
+
         string[] answers = new string [10];
         int quCounter = 0;
 
@@ -28,10 +32,10 @@ namespace Examination_System
 
         public Exam(int _examID)
         {
-            
             InitializeComponent();
             InitForm();
-            examID = _examID;
+
+             examID = _examID;
 
             sqlCmd = new SqlCommand();
             sqlCmd.Connection = sqlCn;
@@ -41,6 +45,12 @@ namespace Examination_System
 
             DAQuestions = new SqlDataAdapter(sqlCmd);
             DTQuestions = new DataTable();
+
+
+            radioButtons[0] = rbChoice1;
+            radioButtons[1] = rbChoice2;
+            radioButtons[2] = rbChoice3;
+            radioButtons[3] = rbChoice4;
         }
         private void InitForm()
         {
@@ -99,9 +109,9 @@ namespace Examination_System
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
-        
+
              answers[quCounter - 1] = findChoosenAnswer();
-        
+            
 
             if (checkCheckdBoxes())
             {
@@ -127,6 +137,10 @@ namespace Examination_System
                     groupBox.Size = new Size(550, 170);
 
                 }
+                if (answers[quCounter] != null)
+                    radioButtons[(int)answers[quCounter][0] - 'a'].Checked = true;
+                else
+                    resetCheckdBoxes();
 
                 lQuestion.Text = $"{++quCounter})  {row["questionText"].ToString()}"; ;
                 rbChoice1.Text = row["choice1"].ToString();
@@ -138,8 +152,6 @@ namespace Examination_System
             {
                 System.Windows.Forms.MessageBox.Show("Please Choose any choice to procced!");
             }
-
-            resetCheckdBoxes();
 
         }
 
@@ -156,6 +168,7 @@ namespace Examination_System
             quCounter -= 2;
             row = DTQuestions.Rows[quCounter];
 
+
             if (row["qType"].ToString() == "T/F")
             {
                 rbChoice3.Hide();
@@ -170,6 +183,7 @@ namespace Examination_System
 
             }
 
+            radioButtons[(int)answers[quCounter][0]-'a'].Checked = true;
             lQuestion.Text = $"{++quCounter})  {row["questionText"].ToString()}"; ;
             rbChoice1.Text = row["choice1"].ToString();
             rbChoice2.Text = row["choice2"].ToString();
@@ -204,6 +218,8 @@ namespace Examination_System
   
         private void BtnFinishExam_Click(object sender, EventArgs e)
         {
+          
+
             answers[quCounter - 1] = findChoosenAnswer();
 
             sqlCmd.Parameters.Clear();

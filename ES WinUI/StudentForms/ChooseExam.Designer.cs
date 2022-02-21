@@ -31,6 +31,7 @@
             this.cbExams = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.btnTakeExam = new MaterialSkin.Controls.MaterialButton();
+            this.btnBack = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // cbExams
@@ -53,6 +54,7 @@
             this.cbExams.Name = "cbExams";
             this.cbExams.Size = new System.Drawing.Size(407, 49);
             this.cbExams.TabIndex = 0;
+            this.cbExams.SelectedIndexChanged += new System.EventHandler(this.CbExams_SelectedIndexChanged);
             // 
             // materialLabel1
             // 
@@ -87,11 +89,32 @@
             this.btnTakeExam.UseVisualStyleBackColor = true;
             this.btnTakeExam.Click += new System.EventHandler(this.BtnTakeExam_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.AutoSize = false;
+            this.btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBack.Depth = 0;
+            this.btnBack.DrawShadows = true;
+            this.btnBack.HighEmphasis = true;
+            this.btnBack.Icon = null;
+            this.btnBack.Location = new System.Drawing.Point(13, 439);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBack.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 43);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Back";
+            this.btnBack.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnBack.UseAccentColor = false;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
             // ChooseExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 542);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnTakeExam);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.cbExams);
@@ -111,5 +134,6 @@
         private MaterialSkin.Controls.MaterialComboBox cbExams;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton btnTakeExam;
+        private MaterialSkin.Controls.MaterialButton btnBack;
     }
 }
