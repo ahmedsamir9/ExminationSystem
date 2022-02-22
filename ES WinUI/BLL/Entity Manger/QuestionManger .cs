@@ -13,98 +13,181 @@ namespace BL
    public class QuestionManger
     {
         static DBManager dBmanager = new DBManager();
-        //public static CourseList selectAllQuestionsOfCourse(int cID)
-        //{
-        //    Dictionary<string, object> Params = new Dictionary<string, object>()
-        //    { 
-        //        ["CId"] = cID,
-        //    };
-        //    return dataTable2CourseList(
-        //        dBmanager.ExecuteDataTable("GetQuestionsWithChoices", Params));
-        //}
-
-        public static int UpdateCourseByID(int id, string name,int duration)
-        {
-
-            Dictionary<string, object> Params = new Dictionary<string, object>()
-            {
-                ["cID"] = id,
-                ["cName"] = name,
-                ["duration"] = duration,
-            };
-
-            return dBmanager.ExecuteNonQuery("updateCourse", Params);
-
-        }
-
-        public static int InsertIntoCourse(string name,int duration)
+        public static QuestionList selectAllQuestionsOfCourse(int cID)
         {
             Dictionary<string, object> Params = new Dictionary<string, object>()
             {
-                ["cName"] = name,
-                ["duration"] = duration,
+                ["CId"] = cID,
             };
-
-            return dBmanager.ExecuteNonQuery("insertCourse", Params);
+            return dataTable2QuestionList(
+                dBmanager.ExecuteDataTable("GetQuestionsWithChoices", Params));
         }
-        public static int InsertCourseIntoInstructor(int cId, int insId)
+        public static QuestionList selectAllTFQuestionsOfCourse(int cID)
         {
             Dictionary<string, object> Params = new Dictionary<string, object>()
             {
-                ["crs_ID"] = cId,
-                ["ins_ID"] = insId,
+                ["CID"] = cID,
             };
-
-            return dBmanager.ExecuteNonQuery("insertIns_Crs", Params);
+            return dataTable2QuestionListTF(
+                dBmanager.ExecuteDataTable("GetTFQuestionForCourse", Params));
         }
-
-        public static int DeleteCourseByID(int course_id)
+        public static int UpdateQuestion(Question question)
         {
-            Dictionary<string, object> Params = new Dictionary<string, object>() { ["courseID"] = course_id };
-            return dBmanager.ExecuteNonQuery("deleteCourse", Params);
+            UpdateQuestionGeneric(question);
+            Dictionary<string, object> ChParams = new Dictionary<string, object>()
+            {
+                ["q_ID"] = question.QID,
+                ["choice1"] = question.Choice1,
+                ["choice2"] = question.Choice2,
+                ["choice3"] = question.Choice3,
+                ["choice4"] = question.Choice4,
+         
+            };
+       
+            return dBmanager.ExecuteNonQuery("updateChoices", ChParams);
+
         }
-    //    public static CourseList dataTable2CourseList(DataTable DT)
-    //    {
-    //        CourseList cLst = new CourseList();
+        public static int UpdateQuestionGeneric(Question question)
+        {
 
-    //        try
-    //        {
-    //            for (int i = 0; i < DT.Rows.Count; i++)
-    //            {
-    //                cLst.Add(dataRow2Course(DT.Rows[i]));
+         
+            Dictionary<string, object> QParams = new Dictionary<string, object>()
+            {
+                ["questionID"] = question.QID,
+                ["questionText"] = question.QName,
+                ["answer"] = question.Ans,
+                ["qType"] = question.Type
+            };
+            
+            return dBmanager.ExecuteNonQuery("updateQuestion", QParams);
 
-    //            }
-    //        }
-    //        catch (Exception ex)
-    //        {
+        }
 
-    //        }
+        public static int InsertIntoQuestion(Question question ,int cID)
+        {
+            InsertIntoQuestiongeneric(question,cID);
 
-    //        return cLst;
-    //    }
+            Dictionary<string, object> ChParams = new Dictionary<string, object>()
+            {
+                ["q_ID"] = question.QID,
+                ["choice1"] = question.Choice1,
+                ["choice2"] = question.Choice2,
+                ["choice3"] = question.Choice3,
+                ["choice4"] = question.Choice4,
 
-    //    public static Course dataRow2Question(DataRow DR)
-    //    {
-    //        Question course = new Question();
-    //        try
-    //        {
-             
-    //            course.CName = DR["cName"].ToString();
+            };
+            return dBmanager.ExecuteNonQuery("InsertChoices", ChParams);
+        }
+        public static int InsertIntoQuestiongeneric(Question question ,int cId)
+        {
+           
+            Dictionary<string, object> QParams = new Dictionary<string, object>()
+            {
+                ["questionText"] = question.QName,
+                ["answer"] = question.Ans,
+                ["qType"] = question.Type,
+                ["CID"] = cId,
 
-    //            if (int.TryParse(DR["cID"]?.ToString(), out int tmpMoney))
-    //                course.CId = tmpMoney;
+            };
+            return dBmanager.ExecuteNonQuery("insertQuestion", QParams);
+        }
 
-    //            if (int.TryParse(DR["duration"]?.ToString(), out tmpMoney))
-    //                course.Duration = tmpMoney;
 
-    //            course.EntityState = EntityState.Unchanged;
-    //        }
-    //        catch (Exception ex)
-    //        {
+        public static int DeleteQuestionByID(int qID)
+        {
+            Dictionary<string, object> Params = new Dictionary<string, object>() { ["questionID"] = qID };
+            return dBmanager.ExecuteNonQuery("deleteQuestion", Params);
+        }
+        public static QuestionList dataTable2QuestionList(DataTable DT)
+        {
+            QuestionList qLst = new QuestionList();
 
-    //        }
-    //        return course;
-    //    }
-    //}
+            try
+            {
+                for (int i = 0; i < DT.Rows.Count; i++)
+                {
+                    qLst.Add(dataRow2Question(DT.Rows[i]));
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return qLst;
+        }
+
+        public static Question dataRow2Question(DataRow DR)
+        {
+            Question question = new Question();
+            try
+            {
+
+                question.Ans = DR["answer"].ToString()[0];
+                question.Choice1 = DR["choice1"].ToString();
+                question.Choice2 = DR["choice2"].ToString();
+                question.Choice3 = DR["choice3"].ToString();
+                question.Choice4 = DR["choice4"].ToString();
+                question.QName = DR["questionText"].ToString();
+                question.Type = DR["qType"].ToString();
+            
+
+                if (int.TryParse(DR["questionID"]?.ToString(), out int tmpMoney))
+                    question.QID = tmpMoney;
+
+
+                question.EntityState = EntityState.Unchanged;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return question;
+        }
+        public static QuestionList dataTable2QuestionListTF(DataTable DT)
+        {
+            QuestionList qLst = new QuestionList();
+
+            try
+            {
+                for (int i = 0; i < DT.Rows.Count; i++)
+                {
+                    qLst.Add(dataRow2QuestionTF(DT.Rows[i]));
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return qLst;
+        }
+
+        public static Question dataRow2QuestionTF(DataRow DR)
+        {
+            Question question = new Question();
+            try
+            {
+
+                question.Ans = DR["answer"].ToString()[0];
+                question.QName = DR["questionText"].ToString();
+                question.Type = DR["qType"].ToString();
+
+
+                if (int.TryParse(DR["questionID"]?.ToString(), out int tmpMoney))
+                    question.QID = tmpMoney;
+
+
+                question.EntityState = EntityState.Unchanged;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return question;
+        }
     }
 }
+

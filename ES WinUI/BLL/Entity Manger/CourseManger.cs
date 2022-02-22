@@ -36,15 +36,16 @@ namespace BL
 
         }
 
-        public static int InsertIntoCourse(string name,int duration)
+        public static int InsertIntoCourse(string name,int duration,int insID)
         {
             Dictionary<string, object> Params = new Dictionary<string, object>()
             {
                 ["cName"] = name,
                 ["duration"] = duration,
+                ["Ins_ID"] = insID
             };
 
-            return dBmanager.ExecuteNonQuery("insertCourse", Params);
+            return dBmanager.ExecuteNonQuery("insertCourseWithInstructor", Params);
         }
         public static int InsertCourseIntoInstructor(int cId, int insId)
         {
@@ -56,7 +57,21 @@ namespace BL
 
             return dBmanager.ExecuteNonQuery("insertIns_Crs", Params);
         }
+        public static bool isCourseHasExam(int course_id) {
+            Dictionary<string, object> Params = new Dictionary<string, object>() { ["CID"] = course_id };
+            int count = (int)dBmanager.ExecuteScaler("CourseHasExams", Params);
+            return count > 0 ? true : false;
+        }
+        public static int geneterateExamForCourse(int cId,int mcqQuestionsCount, int tfQuestionsCount) {
+            //[GenerateExam]
+            Dictionary<string, object> Params = new Dictionary<string, object>() {
+                ["CourseID"] = cId ,
+                ["NumMC"] = mcqQuestionsCount ,
+                ["NumTF"] = tfQuestionsCount 
 
+            };
+            return dBmanager.ExecuteNonQuery("GenerateExam",Params);
+        }
         public static int DeleteCourseByID(int course_id)
         {
             Dictionary<string, object> Params = new Dictionary<string, object>() { ["courseID"] = course_id };

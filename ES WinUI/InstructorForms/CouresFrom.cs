@@ -53,7 +53,6 @@ namespace Examination_System.InstructorForms
 
         private void DataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-          //  Console.WriteLine("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"+ e.Row.Cells[0].Value.ToString());
             if (int.TryParse(e.Row.Cells[0].Value.ToString(), out int temp))
                 if (temp != -1)
                     deletedItem.Add(temp);
@@ -66,7 +65,7 @@ namespace Examination_System.InstructorForms
                 CId = -1,
                 CName="NA",
                 Duration = 14,
-                EntityState =EntityState.Added
+                EntityState = EntityState.Added
             };
         }
 
@@ -104,12 +103,12 @@ namespace Examination_System.InstructorForms
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int cid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
 
             switch (e.ColumnIndex)
             {
                 case 4:
-                   
-                    int cid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                 
                     if (cid != -1) {
 
                         AddStudentToCourse addStudentToCourse =new AddStudentToCourse();
@@ -119,13 +118,34 @@ namespace Examination_System.InstructorForms
 
                     break;
                 case 5:
-
+                    if (cid != -1)
+                    {
+                        new AddQuestion() { CID = cid }.Show();
+                        Hide();
+                    }
                     break;
                 case 6:
+                    if (cid != -1)
+                    {
 
+                      
+                    }
                     break;
                 case  7:
+                    if (cid != -1)
+                    {
+                        if (CourseManger.isCourseHasExam(cid))
+                        {
+                            MessageBox.Show("This Course has exam already"
+                                , "Generate Exam Filed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else {
 
+                            new ExamGenerator() { CID = cid}.Show();
+                            Hide();
+                        }
+
+                    }
                     break;
                 default:
                     break;
@@ -142,8 +162,8 @@ namespace Examination_System.InstructorForms
                 }
                 else if (clist[i].EntityState == EntityState.Added)
                 {
-                    CourseManger.InsertIntoCourse(clist[i].CName, clist[i].Duration);
-                    CourseManger.InsertCourseIntoInstructor(clist[i].CId, User.UserID);
+                    CourseManger.InsertIntoCourse(clist[i].CName, clist[i].Duration,User.UserID);
+                   
                 }
                 
                 clist[i].EntityState = EntityState.Unchanged;
@@ -153,6 +173,12 @@ namespace Examination_System.InstructorForms
                 CourseManger.DeleteCourseByID(id);
             }
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            new InstructorMenu().Show();
+            Hide();
         }
     }
 }

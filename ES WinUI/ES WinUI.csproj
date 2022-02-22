@@ -92,6 +92,12 @@
     <Compile Include="InstructorForms\CouresFrom.Designer.cs">
       <DependentUpon>CouresFrom.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorForms\ExamGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\ExamGenerator.Designer.cs">
+      <DependentUpon>ExamGenerator.cs</DependentUpon>
+    </Compile>
     <Compile Include="InstructorForms\InstructorDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorForms\CouresFrom.resx">
       <DependentUpon>CouresFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\ExamGenerator.resx">
+      <DependentUpon>ExamGenerator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorForms\InstructorDetails.resx">
       <DependentUpon>InstructorDetails.cs</DependentUpon>

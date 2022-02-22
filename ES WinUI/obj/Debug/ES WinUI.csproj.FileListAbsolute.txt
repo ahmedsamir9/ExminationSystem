@@ -122,3 +122,4 @@ C:\Users\owner\Source\Repos\ExminationSystemDBsamir\ES WinUI\obj\Debug\ES WinUI.
 C:\Users\owner\Source\Repos\ExminationSystemDBsamir\ES WinUI\obj\Debug\ES WinUI.csproj.AssemblyReference.cache
 C:\Users\owner\Source\Repos\ExminationSystemDBsamir\ES WinUI\obj\Debug\Examination_System.InstructorForms.AddQuestion.resources
 C:\Users\owner\Source\Repos\ExminationSystemDBsamir\ES WinUI\obj\Debug\Examination_System.InstructorForms.AddStudentToCourse.resources
+C:\Users\owner\Source\Repos\ExminationSystemDBsamir\ES WinUI\obj\Debug\Examination_System.InstructorForms.ExamGenerator.resources

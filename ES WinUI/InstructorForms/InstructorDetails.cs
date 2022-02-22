@@ -94,8 +94,7 @@ namespace Examination_System.InstructorForms
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-            InstructorDetails details = new InstructorDetails();
-            details.Show();
+            new InstructorMenu().Show();
             Hide();
         }
     }

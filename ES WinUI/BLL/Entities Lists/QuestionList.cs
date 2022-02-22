@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    public class QuestionList :List<Question>
+    public class QuestionList : List<Question>
     {
     }
 }

@@ -9,6 +9,16 @@ namespace BL
 {
    public class StudentInCourse: EntityBase
     {
+        /*
+            1-id
+            2- name 
+            3- email 
+            4- bool 
+            users -> type => student
+            student with course => student (course) 
+            
+            
+         */
 
     }
 }

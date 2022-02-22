@@ -84,6 +84,7 @@ namespace Examination_System.InstructorForms
             this.btnBack.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnBack.UseAccentColor = false;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // CouresFrom
             // 
