@@ -1,6 +1,6 @@
 ﻿
 using DAL;
-using Examination_System.BLL.Entities;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,15 +13,15 @@ namespace BL
    public class QuestionManger
     {
         static DBManager dBmanager = new DBManager();
-        public static CourseList selectAllQuestionsOfCourse(int cID)
-        {
-            Dictionary<string, object> Params = new Dictionary<string, object>()
-            { 
-                ["CId"] = cID,
-            };
-            return dataTable2CourseList(
-                dBmanager.ExecuteDataTable("GetQuestionsWithChoices", Params));
-        }
+        //public static CourseList selectAllQuestionsOfCourse(int cID)
+        //{
+        //    Dictionary<string, object> Params = new Dictionary<string, object>()
+        //    { 
+        //        ["CId"] = cID,
+        //    };
+        //    return dataTable2CourseList(
+        //        dBmanager.ExecuteDataTable("GetQuestionsWithChoices", Params));
+        //}
 
         public static int UpdateCourseByID(int id, string name,int duration)
         {
@@ -63,47 +63,48 @@ namespace BL
             Dictionary<string, object> Params = new Dictionary<string, object>() { ["courseID"] = course_id };
             return dBmanager.ExecuteNonQuery("deleteCourse", Params);
         }
-        public static CourseList dataTable2CourseList(DataTable DT)
-        {
-            CourseList cLst = new CourseList();
+    //    public static CourseList dataTable2CourseList(DataTable DT)
+    //    {
+    //        CourseList cLst = new CourseList();
 
-            try
-            {
-                for (int i = 0; i < DT.Rows.Count; i++)
-                {
-                    cLst.Add(dataRow2Course(DT.Rows[i]));
+    //        try
+    //        {
+    //            for (int i = 0; i < DT.Rows.Count; i++)
+    //            {
+    //                cLst.Add(dataRow2Course(DT.Rows[i]));
 
-                }
-            }
-            catch (Exception ex)
-            {
+    //            }
+    //        }
+    //        catch (Exception ex)
+    //        {
 
-            }
+    //        }
 
-            return cLst;
-        }
+    //        return cLst;
+    //    }
 
-        public static Course dataRow2Question(DataRow DR)
-        {
-            Question course = new Question();
-            try
-            {
+    //    public static Course dataRow2Question(DataRow DR)
+    //    {
+    //        Question course = new Question();
+    //        try
+    //        {
              
-                course.CName = DR["cName"].ToString();
+    //            course.CName = DR["cName"].ToString();
 
-                if (int.TryParse(DR["cID"]?.ToString(), out int tmpMoney))
-                    course.CId = tmpMoney;
+    //            if (int.TryParse(DR["cID"]?.ToString(), out int tmpMoney))
+    //                course.CId = tmpMoney;
 
-                if (int.TryParse(DR["duration"]?.ToString(), out tmpMoney))
-                    course.Duration = tmpMoney;
+    //            if (int.TryParse(DR["duration"]?.ToString(), out tmpMoney))
+    //                course.Duration = tmpMoney;
 
-                course.EntityState = EntityState.Unchanged;
-            }
-            catch (Exception ex)
-            {
+    //            course.EntityState = EntityState.Unchanged;
+    //        }
+    //        catch (Exception ex)
+    //        {
 
-            }
-            return course;
-        }
+    //        }
+    //        return course;
+    //    }
+    //}
     }
 }
