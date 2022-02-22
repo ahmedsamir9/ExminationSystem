@@ -1,11 +1,11 @@
-﻿
-using BL;
+﻿using BL;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -17,8 +17,10 @@ namespace Examination_System.InstructorForms
         {
             InitializeComponent();
             InitForm();
-         
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
         }
+
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -32,12 +34,14 @@ namespace Examination_System.InstructorForms
                 TextShade.WHITE
             );
         }
-        CourseList clist ;
+
+        CourseList clist;
         BindingSource source;
         List<int> deletedItem = new List<int>();
+
         private void CouresFrom_Load(object sender, EventArgs e)
         {
-           clist = CourseManger.selectAllCourseOfInstructor(User.UserID);
+            clist = CourseManger.selectAllCourseOfInstructor(User.UserID);
             source = new BindingSource();
             source.DataSource = clist;
             dataGridView1.DataSource = source;
@@ -63,15 +67,14 @@ namespace Examination_System.InstructorForms
             e.NewObject = new Course()
             {
                 CId = -1,
-                CName="NA",
+                CName = "NA",
                 Duration = 14,
                 EntityState = EntityState.Added
             };
         }
 
-      
-
-        private void addBtnsToGridView() {
+        private void addBtnsToGridView()
+        {
             DataGridViewButtonColumn addIns = new DataGridViewButtonColumn();
             addIns.HeaderText = "Instructors";
             addIns.Text = " Add Instructor";
@@ -81,13 +84,13 @@ namespace Examination_System.InstructorForms
             addQuestion.HeaderText = "Questions";
             addQuestion.Text = " Add Question";
             addQuestion.Name = "btn";
-          
+
             addQuestion.UseColumnTextForButtonValue = true;
             DataGridViewButtonColumn GenerateExam = new DataGridViewButtonColumn();
             GenerateExam.HeaderText = "Exams";
             GenerateExam.Text = " GenerateExam";
             GenerateExam.Name = "btnEx";
-      
+
             GenerateExam.UseColumnTextForButtonValue = true;
             DataGridViewButtonColumn addStudents = new DataGridViewButtonColumn();
             addStudents.HeaderText = "Students";
@@ -98,7 +101,6 @@ namespace Examination_System.InstructorForms
             dataGridView1.Columns.Add(addQuestion);
             dataGridView1.Columns.Add(addStudents);
             dataGridView1.Columns.Add(GenerateExam);
-         
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -108,10 +110,10 @@ namespace Examination_System.InstructorForms
             switch (e.ColumnIndex)
             {
                 case 4:
-                 
-                    if (cid != -1) {
 
-                        AddStudentToCourse addStudentToCourse =new AddStudentToCourse();
+                    if (cid != -1)
+                    {
+                        AddStudentToCourse addStudentToCourse = new AddStudentToCourse();
                         addStudentToCourse.Show();
                         Hide();
                     }
@@ -125,26 +127,25 @@ namespace Examination_System.InstructorForms
                     }
                     break;
                 case 6:
-                    if (cid != -1)
-                    {
-
-                      
-                    }
+                    if (cid != -1) { }
                     break;
-                case  7:
+                case 7:
                     if (cid != -1)
                     {
                         if (CourseManger.isCourseHasExam(cid))
                         {
-                            MessageBox.Show("This Course has exam already"
-                                , "Generate Exam Filed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(
+                                "This Course has exam already",
+                                "Generate Exam Filed",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error
+                            );
                         }
-                        else {
-
-                            new ExamGenerator() { CID = cid}.Show();
+                        else
+                        {
+                            new ExamGenerator() { CID = cid }.Show();
                             Hide();
                         }
-
                     }
                     break;
                 default:
@@ -162,17 +163,15 @@ namespace Examination_System.InstructorForms
                 }
                 else if (clist[i].EntityState == EntityState.Added)
                 {
-                    CourseManger.InsertIntoCourse(clist[i].CName, clist[i].Duration,User.UserID);
-                   
+                    CourseManger.InsertIntoCourse(clist[i].CName, clist[i].Duration, User.UserID);
                 }
-                
+
                 clist[i].EntityState = EntityState.Unchanged;
             }
             foreach (var id in deletedItem)
             {
                 CourseManger.DeleteCourseByID(id);
             }
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)

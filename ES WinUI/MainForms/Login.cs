@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,9 @@ namespace Examination_System
 {
     public partial class Login : MaterialForm
     {
-
         SqlConnection sqlCn = new SqlConnection(
-          "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true");
+            "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true"
+        );
         SqlCommand sqlCmd;
         SqlParameter outputPara;
         SqlParameter userTypeOutputPara = new SqlParameter("userType", SqlDbType.NVarChar, 1);
@@ -27,11 +28,13 @@ namespace Examination_System
         {
             InitializeComponent();
 
-
             sqlCmd = new SqlCommand();
             sqlCmd.Connection = sqlCn;
 
             InitForm();
+
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
         }
 
         private void InitForm()
@@ -90,19 +93,14 @@ namespace Examination_System
                     instructorMenu.Show();
                 }
                 Hide();
-
             }
             else
             {
                 MessageBox.Show("The username or the password is incoorect!");
             }
-
-
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-        }
+        private void Login_Load(object sender, EventArgs e) { }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {

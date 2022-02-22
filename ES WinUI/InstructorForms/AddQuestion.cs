@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,10 @@ namespace Examination_System.InstructorForms
         {
             InitializeComponent();
             InitForm();
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
         }
+
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -33,15 +37,16 @@ namespace Examination_System.InstructorForms
                 TextShade.WHITE
             );
         }
+
         QuestionList qlist;
         QuestionList qlistTF;
         BindingSource source;
         BindingSource sourceTF;
-      
+
         public int CID { get; set; }
+
         private void AddQuestion_Load(object sender, EventArgs e)
         {
-
             qlist = QuestionManger.selectAllQuestionsOfCourse(CID);
             source = new BindingSource();
             source.DataSource = qlist;
@@ -63,12 +68,10 @@ namespace Examination_System.InstructorForms
             dataGridView2.Columns["Choice3"].Visible = false;
             dataGridView2.Columns["Choice4"].Visible = false;
             dataGridView2.Columns["Type"].ReadOnly = true;
-       
-      
-            source.AddingNew += Source_AddingNew;
-            sourceTF.AddingNew += SourceTF_AddingNew; ;
 
-            
+            source.AddingNew += Source_AddingNew;
+            sourceTF.AddingNew += SourceTF_AddingNew;
+            ;
         }
 
         private void SourceTF_AddingNew(object sender, AddingNewEventArgs e)
@@ -90,30 +93,30 @@ namespace Examination_System.InstructorForms
                 QID = -1,
                 QName = "NA",
                 Ans = '?',
-                Choice1 ="NA",
-                Choice2 ="NA",
-                Choice3 ="NA",
-                Choice4="NA",
-                Type="MCQ",
+                Choice1 = "NA",
+                Choice2 = "NA",
+                Choice3 = "NA",
+                Choice4 = "NA",
+                Type = "MCQ",
                 EntityState = EntityState.Added
             };
         }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int cid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
 
-        private void materialLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void materialLabel1_Click(object sender, EventArgs e) { }
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
             saveMcqQestions();
             saveTFQestions();
         }
-        private void saveMcqQestions() {
+
+        private void saveMcqQestions()
+        {
             for (int i = 0; i < source.Count; i++)
             {
                 if (qlist[i].EntityState == EntityState.Modified)
@@ -122,12 +125,13 @@ namespace Examination_System.InstructorForms
                 }
                 else if (qlist[i].EntityState == EntityState.Added)
                 {
-                    QuestionManger.InsertIntoQuestion(qlist[i],CID);
+                    QuestionManger.InsertIntoQuestion(qlist[i], CID);
                 }
 
                 qlist[i].EntityState = EntityState.Unchanged;
             }
         }
+
         private void saveTFQestions()
         {
             for (int i = 0; i < sourceTF.Count; i++)
@@ -138,12 +142,13 @@ namespace Examination_System.InstructorForms
                 }
                 else if (qlistTF[i].EntityState == EntityState.Added)
                 {
-                    QuestionManger.InsertIntoQuestion(qlistTF[i],CID);
+                    QuestionManger.InsertIntoQuestion(qlistTF[i], CID);
                 }
 
                 qlistTF[i].EntityState = EntityState.Unchanged;
             }
         }
+
         private void materialButton2_Click(object sender, EventArgs e)
         {
             new CouresFrom().Show();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,17 +16,17 @@ namespace Examination_System
 {
     public partial class Exam : MaterialForm
     {
-
         SqlConnection sqlCn = new SqlConnection(
-          "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true");
+            "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true"
+        );
         SqlCommand sqlCmd;
         SqlDataAdapter DAQuestions;
         DataTable DTQuestions;
         DataRow row;
-        MaterialRadioButton [] radioButtons = new MaterialRadioButton [4];
+        MaterialRadioButton[] radioButtons = new MaterialRadioButton[4];
         bool reset = true;
 
-        string[] answers = new string [10];
+        string[] answers = new string[10];
         int quCounter = 0;
 
         public int examID { get; set; }
@@ -34,8 +35,10 @@ namespace Examination_System
         {
             InitializeComponent();
             InitForm();
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
 
-             examID = _examID;
+            examID = _examID;
 
             sqlCmd = new SqlCommand();
             sqlCmd.Connection = sqlCn;
@@ -46,12 +49,12 @@ namespace Examination_System
             DAQuestions = new SqlDataAdapter(sqlCmd);
             DTQuestions = new DataTable();
 
-
             radioButtons[0] = rbChoice1;
             radioButtons[1] = rbChoice2;
             radioButtons[2] = rbChoice3;
             radioButtons[3] = rbChoice4;
         }
+
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -82,8 +85,6 @@ namespace Examination_System
             sqlCmd.ExecuteNonQuery();
             sqlCn.Close();
 
-
-
             row = DTQuestions.Rows[quCounter++];
             btnBack.Hide();
 
@@ -100,7 +101,8 @@ namespace Examination_System
                 groupBox.Size = new Size(550, 170);
             }
 
-            lQuestion.Text = $"{quCounter})  {row["questionText"].ToString()}"; ;
+            lQuestion.Text = $"{quCounter})  {row["questionText"].ToString()}";
+            ;
             rbChoice1.Text = row["choice1"].ToString();
             rbChoice2.Text = row["choice2"].ToString();
             rbChoice3.Text = row["choice3"].ToString();
@@ -109,9 +111,7 @@ namespace Examination_System
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
-
-             answers[quCounter - 1] = findChoosenAnswer();
-            
+            answers[quCounter - 1] = findChoosenAnswer();
 
             if (checkCheckdBoxes())
             {
@@ -135,14 +135,14 @@ namespace Examination_System
                     rbChoice3.Show();
                     rbChoice4.Show();
                     groupBox.Size = new Size(550, 170);
-
                 }
                 if (answers[quCounter] != null)
                     radioButtons[(int)answers[quCounter][0] - 'a'].Checked = true;
                 else
                     resetCheckdBoxes();
 
-                lQuestion.Text = $"{++quCounter})  {row["questionText"].ToString()}"; ;
+                lQuestion.Text = $"{++quCounter})  {row["questionText"].ToString()}";
+                ;
                 rbChoice1.Text = row["choice1"].ToString();
                 rbChoice2.Text = row["choice2"].ToString();
                 rbChoice3.Text = row["choice3"].ToString();
@@ -152,12 +152,11 @@ namespace Examination_System
             {
                 System.Windows.Forms.MessageBox.Show("Please Choose any choice to procced!");
             }
-
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            if(quCounter == 2)
+            if (quCounter == 2)
                 btnBack.Hide();
 
             if (quCounter == 10)
@@ -167,7 +166,6 @@ namespace Examination_System
             }
             quCounter -= 2;
             row = DTQuestions.Rows[quCounter];
-
 
             if (row["qType"].ToString() == "T/F")
             {
@@ -180,22 +178,22 @@ namespace Examination_System
                 rbChoice3.Show();
                 rbChoice4.Show();
                 groupBox.Size = new Size(550, 170);
-
             }
 
-            radioButtons[(int)answers[quCounter][0]-'a'].Checked = true;
-            lQuestion.Text = $"{++quCounter})  {row["questionText"].ToString()}"; ;
+            radioButtons[(int)answers[quCounter][0] - 'a'].Checked = true;
+            lQuestion.Text = $"{++quCounter})  {row["questionText"].ToString()}";
+            ;
             rbChoice1.Text = row["choice1"].ToString();
             rbChoice2.Text = row["choice2"].ToString();
             rbChoice3.Text = row["choice3"].ToString();
             rbChoice4.Text = row["choice4"].ToString();
-
         }
 
-        internal bool checkCheckdBoxes() {
-
+        internal bool checkCheckdBoxes()
+        {
             return rbChoice1.Checked || rbChoice2.Checked || rbChoice3.Checked || rbChoice4.Checked;
         }
+
         internal void resetCheckdBoxes()
         {
             rbChoice1.Checked = false;
@@ -203,6 +201,7 @@ namespace Examination_System
             rbChoice3.Checked = false;
             rbChoice4.Checked = false;
         }
+
         internal string findChoosenAnswer()
         {
             if (rbChoice1.Checked)
@@ -213,26 +212,26 @@ namespace Examination_System
                 return "c";
             else
                 return "d";
-
         }
-  
+
         private void BtnFinishExam_Click(object sender, EventArgs e)
         {
-          
-
             answers[quCounter - 1] = findChoosenAnswer();
 
             sqlCmd.Parameters.Clear();
             sqlCmd.CommandText = "insertStdSolveRelation";
             sqlCn.Open();
 
-            for (int i=0; i< 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 row = DTQuestions.Rows[i];
 
                 sqlCmd.Parameters.AddWithValue("Std_ID", User.UserID);
                 sqlCmd.Parameters.AddWithValue("Exam_id", examID);
-                sqlCmd.Parameters.AddWithValue("questionID", Convert.ToInt32(row["questionID"].ToString()));
+                sqlCmd.Parameters.AddWithValue(
+                    "questionID",
+                    Convert.ToInt32(row["questionID"].ToString())
+                );
                 sqlCmd.Parameters.AddWithValue("St_Answer", answers[i]);
 
                 sqlCmd.ExecuteNonQuery();
@@ -253,13 +252,14 @@ namespace Examination_System
 
             sqlCmd.Parameters.AddWithValue("ExamID", examID);
             sqlCmd.Parameters.AddWithValue("StuID", User.UserID);
-            
-                
+
             sqlCmd.ExecuteNonQuery();
 
             sqlCn.Close();
 
-            System.Windows.Forms.MessageBox.Show($"You have successfully submited the exam! and you got {outputPara.Value.ToString()} out of 10");
+            System.Windows.Forms.MessageBox.Show(
+                $"You have successfully submited the exam! and you got {outputPara.Value.ToString()} out of 10"
+            );
 
             Hide();
             new StudentMenu().Show();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,9 @@ namespace Examination_System
         {
             InitializeComponent();
             InitForm();
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
         }
+
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -34,10 +37,7 @@ namespace Examination_System
             );
         }
 
-        private void StudentMenu_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void StudentMenu_Load(object sender, EventArgs e) { }
 
         private void BtnShowDetails_Click(object sender, EventArgs e)
         {
@@ -57,6 +57,12 @@ namespace Examination_System
             StudentGrades studentGradesFrm = new StudentGrades();
             studentGradesFrm.Show();
             Hide();
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Login().Show();
         }
     }
 }

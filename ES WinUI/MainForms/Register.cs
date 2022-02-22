@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,11 @@ namespace Examination_System
     public partial class Register : MaterialForm
     {
         SqlConnection sqlCn = new SqlConnection(
-         "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true"
+            "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true"
         );
 
         SqlCommand sqlCmd;
+
         public Register()
         {
             InitializeComponent();
@@ -29,7 +31,9 @@ namespace Examination_System
 
             InitForm();
             var materialSkinManager = MaterialSkinManager.Instance;
-   
+
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
         }
 
         private void InitForm()
@@ -46,16 +50,15 @@ namespace Examination_System
             );
         }
 
-
         private void Register_Load(object sender, EventArgs e) { }
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 sqlCmd.Parameters.Clear();
                 sqlCmd.CommandType = CommandType.StoredProcedure;
                 sqlCmd.CommandText = "insertUser";
-
 
                 sqlCmd.Parameters.AddWithValue("fName", tbFirstName.Text);
                 sqlCmd.Parameters.AddWithValue("lfName", tbLastName.Text);
@@ -77,14 +80,12 @@ namespace Examination_System
                 sqlCn.Close();
 
                 MessageBox.Show("You Registered successfully!");
-
-            } catch(Exception E)
+            }
+            catch (Exception E)
             {
                 MessageBox.Show("Error");
                 sqlCn.Close();
             }
-
-
         }
     }
 }

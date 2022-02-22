@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,10 @@ namespace Examination_System.InstructorForms
             InitializeComponent();
 
             InitForm();
-           
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
         }
-     
+
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -36,10 +38,8 @@ namespace Examination_System.InstructorForms
                 TextShade.WHITE
             );
         }
-        private void InstructorMenu_Load(object sender, EventArgs e)
-        {
 
-        }
+        private void InstructorMenu_Load(object sender, EventArgs e) { }
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {

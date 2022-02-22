@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,13 @@ namespace Examination_System.InstructorForms
         {
             InitializeComponent();
             InitForm();
+
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
         }
+
         public int CID { get; set; }
+
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -34,27 +40,37 @@ namespace Examination_System.InstructorForms
                 TextShade.WHITE
             );
         }
-        private void ExamGenerator_Load(object sender, EventArgs e)
-        {
 
-        }
-        int mcqCount = -1, tfCount = -1;
+        private void ExamGenerator_Load(object sender, EventArgs e) { }
+
+        int mcqCount = -1,
+            tfCount = -1;
+
         private void materialButton1_Click(object sender, EventArgs e)
         {
             if (int.TryParse(txtMCQNum.Text.ToString(), out int temp))
                 mcqCount = temp;
             if (int.TryParse(txtMCQNum.Text.ToString(), out temp))
                 tfCount = temp;
-            if (mcqCount == -1 || tfCount== -1 || ((mcqCount + tfCount) > 10 || (mcqCount + tfCount) < 10))
+            if (
+                mcqCount == -1
+                || tfCount == -1
+                || ((mcqCount + tfCount) > 10 || (mcqCount + tfCount) < 10)
+            )
             {
-                MessageBox.Show("enter valid values"
-                                , "Generate Exam Filed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "enter valid values",
+                    "Generate Exam Filed",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
-            else {
+            else
+            {
                 CourseManger.geneterateExamForCourse(CID, mcqCount, tfCount);
                 new CouresFrom().Show();
                 Hide();
             }
         }
-        }
     }
+}

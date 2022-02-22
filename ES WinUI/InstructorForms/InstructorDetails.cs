@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,14 +17,19 @@ namespace Examination_System.InstructorForms
     public partial class InstructorDetails : MaterialForm
     {
         SqlConnection sqlCn = new SqlConnection(
-           "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true"
-       );
+            "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true"
+        );
         SqlCommand sqlCmd;
+
         public InstructorDetails()
         {
             InitializeComponent();
             InitForm();
+
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
         }
+
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -37,6 +43,7 @@ namespace Examination_System.InstructorForms
                 TextShade.WHITE
             );
         }
+
         private void InstructorDetails_Load(object sender, EventArgs e)
         {
             sqlCmd = new SqlCommand();
@@ -83,7 +90,6 @@ namespace Examination_System.InstructorForms
                 sqlCn.Open();
                 sqlCmd.ExecuteNonQuery();
                 sqlCn.Close();
-
             }
             catch (Exception Ex)
             {

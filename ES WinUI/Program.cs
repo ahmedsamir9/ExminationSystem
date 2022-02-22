@@ -24,9 +24,6 @@ namespace Examination_System
             Application.Run(new Login());
         }
 
-
-
         public static int userID;
-
     }
 }

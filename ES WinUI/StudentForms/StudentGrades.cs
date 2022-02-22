@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,6 @@ namespace Examination_System
 {
     public partial class StudentGrades : MaterialForm
     {
-
         SqlConnection SqlCN;
         SqlCommand sqlCmd;
         SqlDataAdapter DA;
@@ -27,8 +27,8 @@ namespace Examination_System
             InitForm();
 
             SqlCN = new SqlConnection(
-             "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true");
-           
+                "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true"
+            );
 
             sqlCmd = new SqlCommand();
             sqlCmd.Connection = SqlCN;
@@ -45,7 +45,7 @@ namespace Examination_System
             dataGridView1.Columns["cName"].HeaderText = "Course Name";
             dataGridView1.Columns["grade"].HeaderText = "Grade";
 
-            dataGridView1.Columns["grade"].ReadOnly= true;
+            dataGridView1.Columns["grade"].ReadOnly = true;
             dataGridView1.Columns["cName"].ReadOnly = true;
 
             dataGridView1.DataBindingComplete += (o, _) =>
@@ -54,18 +54,20 @@ namespace Examination_System
                 if (dataGridView != null)
                 {
                     dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode =
+                        DataGridViewAutoSizeColumnMode.Fill;
                 }
             };
 
-            foreach(DataGridViewColumn col in dataGridView1.Columns)
+            foreach (DataGridViewColumn col in dataGridView1.Columns)
             {
                 col.DefaultCellStyle.ForeColor = Color.Black;
                 col.DefaultCellStyle.ForeColor = Color.Black;
             }
-            
 
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
         }
+
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -80,16 +82,18 @@ namespace Examination_System
             );
         }
 
-
-        private void StudentGrades_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void StudentGrades_Load(object sender, EventArgs e) { }
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
             Hide();
             new StudentMenu().Show();
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Login().Show();
         }
     }
 }

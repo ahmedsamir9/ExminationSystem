@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,6 @@ using Examination_System.Reports.StDetailsInDeptReport;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
-
 namespace Examination_System.MainForms
 {
     public partial class ReportsMenu : MaterialForm
@@ -22,7 +22,8 @@ namespace Examination_System.MainForms
         {
             InitializeComponent();
             InitForm();
-
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
         }
 
         private void InitForm()
@@ -39,11 +40,7 @@ namespace Examination_System.MainForms
             );
         }
 
-
-        private void ReportsMenu_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void ReportsMenu_Load(object sender, EventArgs e) { }
 
         private void BtnReport1_Click(object sender, EventArgs e)
         {
@@ -63,9 +60,6 @@ namespace Examination_System.MainForms
             Hide();
         }
 
-        private void materialButton2_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void materialButton2_Click(object sender, EventArgs e) { }
     }
 }

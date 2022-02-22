@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,13 @@ namespace Examination_System.StudentForms
 {
     public partial class ChooseExam : MaterialForm
     {
-
         SqlConnection sqlCn = new SqlConnection(
-        "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true");
+            "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true"
+        );
         SqlCommand sqlCmd;
         SqlDataAdapter DAExams;
         DataTable DTExams;
+
         public ChooseExam()
         {
             InitializeComponent();
@@ -31,11 +33,12 @@ namespace Examination_System.StudentForms
             sqlCmd.Connection = sqlCn;
             sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.CommandText = "GetAviExams";
-            sqlCmd.Parameters.AddWithValue("STD_ID", User.UserID);// edit this with the exam ID after then.
+            sqlCmd.Parameters.AddWithValue("STD_ID", User.UserID); // edit this with the exam ID after then.
 
             DAExams = new SqlDataAdapter(sqlCmd);
             DTExams = new DataTable();
 
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
         }
 
         private void InitForm()
@@ -66,16 +69,12 @@ namespace Examination_System.StudentForms
         {
             Hide();
 
-            
             DataRow row = DTExams.Rows[int.Parse(cbExams.SelectedIndex.ToString())];
             var exam = new Exam(Convert.ToInt32(row["Exam_ID"]));
             exam.Show();
         }
 
-        private void MaterialLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void MaterialLabel1_Click(object sender, EventArgs e) { }
 
         private void CbExams_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -86,6 +85,12 @@ namespace Examination_System.StudentForms
         {
             Hide();
             new StudentMenu().Show();
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Login().Show();
         }
     }
 }

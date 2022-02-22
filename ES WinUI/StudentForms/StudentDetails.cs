@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,6 @@ namespace Examination_System
 {
     public partial class StudentDetails : MaterialForm
     {
-
         SqlConnection sqlCn = new SqlConnection(
             "Data Source=.;Initial Catalog=ExaminationSytem;Integrated Security=true"
         );
@@ -27,10 +27,13 @@ namespace Examination_System
             sqlCmd = new SqlCommand();
             sqlCmd.Connection = sqlCn;
 
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+
             InitForm();
         }
 
-        private void InitForm() {
+        private void InitForm()
+        {
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
@@ -41,14 +44,14 @@ namespace Examination_System
                 Accent.LightBlue200,
                 TextShade.WHITE
             );
-        } 
+        }
+
         private void StudentDetails_Load(object sender, EventArgs e)
         {
             sqlCmd.Parameters.Clear();
             sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.CommandText = "GetStudentDEtails";
-            sqlCmd.Parameters.AddWithValue("st_id", User.UserID); 
-
+            sqlCmd.Parameters.AddWithValue("st_id", User.UserID);
 
             sqlCn.Open();
             SqlDataReader reader = sqlCmd.ExecuteReader();
@@ -88,13 +91,24 @@ namespace Examination_System
                 sqlCn.Open();
                 sqlCmd.ExecuteNonQuery();
                 sqlCn.Close();
-
             }
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.Message.ToString());
                 sqlCn.Close();
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new StudentMenu().Show();
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Login().Show();
         }
     }
 }

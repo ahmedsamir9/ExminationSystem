@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,15 +16,16 @@ namespace Examination_System.InstructorForms
     public partial class AddStudentToCourse : MaterialForm
     {
         public int Cid { get; set; }
+
         public AddStudentToCourse()
         {
             InitializeComponent();
+            FormClosed += (seneder, e) => Process.GetCurrentProcess().Kill();
+            ;
         }
 
-        private void AddStudentToCourse_Load(object sender, EventArgs e)
-        {
+        private void AddStudentToCourse_Load(object sender, EventArgs e) { }
 
-        }
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
