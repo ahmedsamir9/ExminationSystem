@@ -64,6 +64,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Entities Lists\CourseList.cs" />
+    <Compile Include="BLL\Entities Lists\QuestionList.cs" />
+    <Compile Include="BLL\Entities\Course.cs" />
+    <Compile Include="BLL\Entities\EntityBase.cs" />
+    <Compile Include="BLL\Entities\EntityState.cs" />
+    <Compile Include="BLL\Entities\Question.cs" />
+    <Compile Include="BLL\Entities\StudentInCourse.cs" />
+    <Compile Include="BLL\Entity Manger\QuestionManger .cs" />
+    <Compile Include="BLL\Entity Manger\CourseManger.cs" />
+    <Compile Include="DAL\DBManager.cs" />
+    <Compile Include="InstructorForms\AddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\AddQuestion.Designer.cs">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForms\AddStudentToCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\AddStudentToCourse.Designer.cs">
+      <DependentUpon>AddStudentToCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="InstructorForms\CouresFrom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +149,12 @@
       <DependentUpon>StudentMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="InstructorForms\AddQuestion.resx">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\AddStudentToCourse.resx">
+      <DependentUpon>AddStudentToCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InstructorForms\CouresFrom.resx">
       <DependentUpon>CouresFrom.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +208,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
