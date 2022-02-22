@@ -71,11 +71,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Entities Lists\CourseList.cs" />
+    <Compile Include="BLL\Entities Lists\QuestionList.cs" />
+    <Compile Include="BLL\Entities\Course.cs" />
+    <Compile Include="BLL\Entities\EntityBase.cs" />
+    <Compile Include="BLL\Entities\EntityState.cs" />
+    <Compile Include="BLL\Entities\Question.cs" />
+    <Compile Include="BLL\Entities\StudentInCourse.cs" />
+    <Compile Include="BLL\Entity Manger\CourseManger.cs" />
+    <Compile Include="BLL\Entity Manger\QuestionManger .cs" />
+    <Compile Include="DAL\DBManager.cs" />
+    <Compile Include="InstructorForms\AddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\AddQuestion.Designer.cs">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForms\AddStudentToCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\AddStudentToCourse.Designer.cs">
+      <DependentUpon>AddStudentToCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForms\CouresFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\CouresFrom.Designer.cs">
+      <DependentUpon>CouresFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForms\ExamGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\ExamGenerator.Designer.cs">
+      <DependentUpon>ExamGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForms\InstructorDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\InstructorDetails.Designer.cs">
+      <DependentUpon>InstructorDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForms\InstructorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\InstructorMenu.Designer.cs">
+      <DependentUpon>InstructorMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\ReportsMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForms\ReportsMenu.Designer.cs">
       <DependentUpon>ReportsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Get Course Topics\CourseTopics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Get Course Topics\CourseTopics.Designer.cs">
+      <DependentUpon>CourseTopics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Get Course Topics\CourseTopicsReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Get Course Topics\CourseTopicsReportViewer.Designer.cs">
+      <DependentUpon>CourseTopicsReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\GetStudentGrades\StudentGrades.cs">
       <SubType>Form</SubType>
@@ -155,6 +213,24 @@
       <DependentUpon>StudentMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="InstructorForms\AddQuestion.resx">
+      <DependentUpon>AddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\AddStudentToCourse.resx">
+      <DependentUpon>AddStudentToCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\CouresFrom.resx">
+      <DependentUpon>CouresFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\ExamGenerator.resx">
+      <DependentUpon>ExamGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\InstructorDetails.resx">
+      <DependentUpon>InstructorDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\InstructorMenu.resx">
+      <DependentUpon>InstructorMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\ReportsMenu.resx">
       <DependentUpon>ReportsMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,5 +301,6 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

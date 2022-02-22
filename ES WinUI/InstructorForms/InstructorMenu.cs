@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Examination_System.MainForms;
+using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,24 +10,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Examination_System.InstructorForms;
-using Examination_System.Reports.GetStudentGrades;
-using Examination_System.Reports.StDetailsInDeptReport;
-using MaterialSkin;
-using MaterialSkin.Controls;
 
-
-namespace Examination_System.MainForms
+namespace Examination_System.InstructorForms
 {
-    public partial class ReportsMenu : MaterialForm
+    public partial class InstructorMenu : MaterialForm
     {
-        public ReportsMenu()
+        public InstructorMenu()
         {
             InitializeComponent();
+
             InitForm();
-
+           
         }
-
+     
         private void InitForm()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -38,34 +36,36 @@ namespace Examination_System.MainForms
                 TextShade.WHITE
             );
         }
-
-
-        private void ReportsMenu_Load(object sender, EventArgs e)
+        private void InstructorMenu_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnReport1_Click(object sender, EventArgs e)
+        private void btnSignOut_Click(object sender, EventArgs e)
         {
-            Hide();
-            new StudentDetailsinDept().Show();
-        }
-
-        private void BtnReport2_Click(object sender, EventArgs e)
-        {
-            Hide();
-            new Reports.GetStudentGrades.StudentGrades().Show();
-        }
-
-        private void materialButton1_Click(object sender, EventArgs e)
-        {
-            new InstructorMenu().Show();
+            Login login = new Login();
+            login.Show();
             Hide();
         }
 
-        private void materialButton2_Click(object sender, EventArgs e)
+        private void btnDetails_Click(object sender, EventArgs e)
         {
+            InstructorDetails instructorDetails = new InstructorDetails();
+            instructorDetails.Show();
+            Hide();
+        }
 
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            CouresFrom cf = new CouresFrom();
+            cf.Show();
+            Hide();
+        }
+
+        private void btnAssignStudent_Click(object sender, EventArgs e)
+        {
+            new ReportsMenu().Show();
+            Hide();
         }
     }
 }

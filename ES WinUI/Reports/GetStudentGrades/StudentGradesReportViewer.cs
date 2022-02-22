@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Examination_System.Reports.GetStudentGrades
 {
-    public partial class StudentGradesReportViewer : Form
+    public partial class StudentGradesReportViewer : MaterialForm
     {
 
         SqlConnection sqlCn = new SqlConnection(
@@ -45,5 +46,9 @@ namespace Examination_System.Reports.GetStudentGrades
             crystalReportViewer2.DisplayToolbar = true;
         }
 
+        private void crystalReportViewer2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
