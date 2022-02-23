@@ -150,31 +150,6 @@ C:\Users\owner\Source\Repos\ExminationSystemDBsal\ES WinUI\bin\Debug\ComponentFa
 C:\Users\owner\Source\Repos\ExminationSystemDBsal\ES WinUI\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 C:\Users\owner\Source\Repos\ExminationSystemDBsal\ES WinUI\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
 C:\Users\owner\Source\Repos\ExminationSystemDBsal\ES WinUI\obj\Debug\ES WinUI.csproj.CopyComplete
-G:\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.AssemblyReference.cache
-G:\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.SuggestedBindingRedirects.cache
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.AddQuestion.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.AddStudentToCourse.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.CouresFrom.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.ExamGenerator.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.InstructorDetails.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.InstructorMenu.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.MainForms.ReportsMenu.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.GetStudentGrades.StudentGrades.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.GetStudentGrades.StudentGradesReportViewer.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.StDetailsInDeptReport.StudentDetailsinDept.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.StudentDetailsinDeptViewer.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentForms.ChooseExam.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Exam.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Login.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Properties.Resources.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Register.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentDetails.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentGrades.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentMenu.resources
-G:\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.GenerateResource.cache
-G:\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.CoreCompileInputs.cache
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination System.exe
-G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination System.pdb
 G:\ExminationSystemDB\ES WinUI\bin\Debug\Examination System.exe.config
 G:\ExminationSystemDB\ES WinUI\bin\Debug\Examination System.exe
 G:\ExminationSystemDB\ES WinUI\bin\Debug\Examination System.pdb
@@ -208,4 +183,36 @@ G:\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
 G:\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Ribbon.pdb
 G:\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 G:\ExminationSystemDB\ES WinUI\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.AddQuestion.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.AddStudentToCourse.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.CouresFrom.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.ExamGenerator.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.InstructorDetails.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.InstructorForms.InstructorMenu.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.MainForms.ReportsMenu.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.GetCourseTopics.GetCourseTopicsViewer.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.GetStudentGrades.StudentGrades.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.GetStudentGrades.StudentGradesReportViewer.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.StDetailsInDeptReport.GetCourseTopics.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.StDetailsInDeptReport.StudentDetailsinDept.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.StudentDetailsinDeptViewer.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentForms.ChooseExam.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Exam.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Login.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Properties.Resources.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Register.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentDetails.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentGrades.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.StudentMenu.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.GenerateResource.cache
+G:\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.CoreCompileInputs.cache
 G:\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csproj.CopyComplete
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination System.exe
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination System.pdb
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.GetInstCourses.GetInstCourses.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.GetInstCourses.GetCourseTopicsViewer.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\ES WinUI.csprojAssemblyReference.cache
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.StDetailsInDeptReport.GetExamQuestions.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.GetCourseTopics.GetExamQuestionsViewer.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.StDetailsInDeptReport.GetStudentAnswers.resources
+G:\ExminationSystemDB\ES WinUI\obj\Debug\Examination_System.Reports.GetStudentAnswersViewer.resources

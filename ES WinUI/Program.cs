@@ -1,5 +1,6 @@
 ﻿using Examination_System.MainForms;
 using Examination_System.Reports;
+using Examination_System.Reports.GetInstCourses;
 using Examination_System.Reports.GetStudentGrades;
 using Examination_System.Reports.StDetailsInDeptReport;
 using Examination_System.StudentForms;
@@ -21,7 +22,7 @@ namespace Examination_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new ReportsMenu());
         }
 
         public static int userID;

@@ -49,5 +49,10 @@ namespace Examination_System.Reports
         {
 
         }
+
+        private void CrystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

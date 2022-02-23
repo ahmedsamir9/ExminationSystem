@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Examination_System.InstructorForms;
+using Examination_System.Reports.GetInstCourses;
 using Examination_System.Reports.GetStudentGrades;
 using Examination_System.Reports.StDetailsInDeptReport;
 using MaterialSkin;
@@ -60,6 +61,28 @@ namespace Examination_System.MainForms
             Hide();
         }
 
-        private void materialButton2_Click(object sender, EventArgs e) { }
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new GetInstCourses().Show();
+        }
+
+        private void MaterialButton3_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new GetCourseTopics().Show();
+        }
+
+        private void MaterialButton4_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new GetExamQuestions().Show();
+        }
+
+        private void MaterialButton5_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new GetStudentAnswers().Show();
+        }
     }
 }

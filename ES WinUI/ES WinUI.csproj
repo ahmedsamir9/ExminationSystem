@@ -123,17 +123,62 @@
     <Compile Include="MainForms\ReportsMenu.Designer.cs">
       <DependentUpon>ReportsMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\Get Course Topics\CourseTopics.cs">
+    <Compile Include="Reports\GetStudentAnswers\GetStudentAnswers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\Get Course Topics\CourseTopics.Designer.cs">
-      <DependentUpon>CourseTopics.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\Get Course Topics\CourseTopicsReportViewer.cs">
+    <Compile Include="Reports\GetStudentAnswers\GetStudentAnswersViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\Get Course Topics\CourseTopicsReportViewer.Designer.cs">
-      <DependentUpon>CourseTopicsReportViewer.cs</DependentUpon>
+    <Compile Include="Reports\GetStudentAnswers\GetStudentAnswersViewer.Designer.cs">
+      <DependentUpon>GetStudentAnswersViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GetExamQuestions\ExamQuestionsViewerReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExamQuestionsViewerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\GetExamQuestions\GetExamQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GetExamQuestions\GetExamQuestionsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GetExamQuestions\GetExamQuestionsViewer.Designer.cs">
+      <DependentUpon>GetExamQuestionsViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GetCourseTopics\GetCourseTopicsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetCourseTopicsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\GetInstCourses\GetInstCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GetInstCourses\GetInstCoursesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetInstCoursesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\GetInstCourses\GetInstCoursesViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GetInstCourses\GetInstCoursesViewer.Designer.cs">
+      <DependentUpon>GetInstCoursesViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GetCourseTopics\GetCourseTopicsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GetCourseTopics\GetCourseTopicsViewer.Designer.cs">
+      <DependentUpon>GetCourseTopicsViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GetStudentAnswers\StudentAnswerReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentAnswerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\GetStudentGrades\StudentGrades.cs">
       <SubType>Form</SubType>
@@ -152,6 +197,9 @@
     </Compile>
     <Compile Include="Reports\GetStudentGrades\StudentGradesReportViewer.Designer.cs">
       <DependentUpon>StudentGradesReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GetCourseTopics\GetCourseTopics.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\StDetailsInDeptReport\StudentDetailsinDept.cs">
       <SubType>Form</SubType>
@@ -234,6 +282,43 @@
     <EmbeddedResource Include="MainForms\ReportsMenu.resx">
       <DependentUpon>ReportsMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetStudentAnswers\GetStudentAnswers.resx">
+      <DependentUpon>GetStudentAnswers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetStudentAnswers\GetStudentAnswersViewer.resx">
+      <DependentUpon>GetStudentAnswersViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetExamQuestions\ExamQuestionsViewerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ExamQuestionsViewerReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetExamQuestions\GetExamQuestions.resx">
+      <DependentUpon>GetExamQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetExamQuestions\GetExamQuestionsViewer.resx">
+      <DependentUpon>GetExamQuestionsViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetCourseTopics\GetCourseTopicsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GetCourseTopicsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetInstCourses\GetInstCourses.resx">
+      <DependentUpon>GetInstCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetInstCourses\GetInstCoursesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GetInstCoursesReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetInstCourses\GetInstCoursesViewer.resx">
+      <DependentUpon>GetInstCoursesViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetCourseTopics\GetCourseTopicsViewer.resx">
+      <DependentUpon>GetCourseTopicsViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetStudentAnswers\StudentAnswerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentAnswerReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\GetStudentGrades\StudentGrades.resx">
       <DependentUpon>StudentGrades.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\GetStudentGrades\StudentGradesReportViewer.resx">
       <DependentUpon>StudentGradesReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GetCourseTopics\GetCourseTopics.resx">
+      <DependentUpon>GetCourseTopics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\StDetailsInDeptReport\StudentDetailsinDept.resx">
       <DependentUpon>StudentDetailsinDept.cs</DependentUpon>

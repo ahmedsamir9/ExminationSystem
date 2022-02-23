@@ -97,7 +97,7 @@
             this.Controls.Add(this.btnShowReport);
             this.Controls.Add(this.tbStudentID);
             this.Name = "StudentGrades";
-            this.Text = "StudentGradesDept";
+            this.Text = "Student Grades Report";
             this.Load += new System.EventHandler(this.StudentGradesDept_Load);
             this.ResumeLayout(false);
 

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Examination_System.Reports.GetStudentGrades
 {
-    public partial class StudentGradesReportViewer : MaterialForm
+    public partial class StudentGradesReportViewer : Form
     {
 
         SqlConnection sqlCn = new SqlConnection(
