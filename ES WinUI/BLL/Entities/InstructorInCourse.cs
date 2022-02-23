@@ -1,5 +1,4 @@
-﻿using BL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-   public class StudentInCourse: EntityBase
+    class InstructorInCourse : EntityBase
     {
         int id;
         string fullName;
         string email;
-        bool enrolled;
+        bool assigned;
 
         public int ID
         {
@@ -33,7 +32,7 @@ namespace BL
             get { return this.fullName; }
             set
             {
-                if(value != this.fullName)
+                if (value != this.fullName)
                 {
                     this.fullName = value;
                     if (this.EntityState != EntityState.Added)
@@ -56,19 +55,18 @@ namespace BL
             }
         }
 
-        public bool Enrolled
+        public bool Assigned
         {
-            get { return this.enrolled; }
+            get { return this.assigned; }
             set
             {
-                if (value != this.enrolled)
+                if (value != this.assigned)
                 {
-                    this.enrolled = value;
+                    this.assigned = value;
                     if (this.EntityState != EntityState.Added)
                         this.EntityState = EntityState.Modified;
                 }
             }
         }
-
     }
 }

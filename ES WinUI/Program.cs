@@ -22,7 +22,7 @@ namespace Examination_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReportsMenu());
+            Application.Run(new Login());
         }
 
         public static int userID;

@@ -1,7 +1,7 @@
 ﻿
 namespace Examination_System.InstructorForms
 {
-    partial class AddStudentToCourse
+    partial class CourseInstrctorFrom
     {
         /// <summary>
         /// Required designer variable.
@@ -38,9 +38,9 @@ namespace Examination_System.InstructorForms
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(161, 98);
+            this.dataGridView1.Location = new System.Drawing.Point(159, 104);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(475, 229);
+            this.dataGridView1.Size = new System.Drawing.Size(491, 208);
             this.dataGridView1.TabIndex = 0;
             // 
             // materialButton1
@@ -56,7 +56,7 @@ namespace Examination_System.InstructorForms
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.Size = new System.Drawing.Size(129, 36);
             this.materialButton1.TabIndex = 1;
-            this.materialButton1.Text = "Save changes";
+            this.materialButton1.Text = "Save Changes";
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
@@ -75,13 +75,13 @@ namespace Examination_System.InstructorForms
             this.materialButton2.Name = "materialButton2";
             this.materialButton2.Size = new System.Drawing.Size(59, 36);
             this.materialButton2.TabIndex = 2;
-            this.materialButton2.Text = "back";
+            this.materialButton2.Text = "Back";
             this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton2.UseAccentColor = false;
             this.materialButton2.UseVisualStyleBackColor = true;
             this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
             // 
-            // AddStudentToCourse
+            // CourseInstrctorFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,9 +89,9 @@ namespace Examination_System.InstructorForms
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "AddStudentToCourse";
-            this.Text = "AddStudentToCourse";
-            this.Load += new System.EventHandler(this.AddStudentToCourse_Load);
+            this.Name = "CourseInstrctorFrom";
+            this.Text = "CourseInstrctorFrom";
+            this.Load += new System.EventHandler(this.CourseInstrctorFrom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

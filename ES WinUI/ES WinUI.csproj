@@ -72,14 +72,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\Entities Lists\CourseList.cs" />
+    <Compile Include="BLL\Entities Lists\InstructorCourseList.cs" />
     <Compile Include="BLL\Entities Lists\QuestionList.cs" />
+    <Compile Include="BLL\Entities Lists\StudentCourseList.cs" />
     <Compile Include="BLL\Entities\Course.cs" />
     <Compile Include="BLL\Entities\EntityBase.cs" />
     <Compile Include="BLL\Entities\EntityState.cs" />
+    <Compile Include="BLL\Entities\InstructorInCourse.cs" />
     <Compile Include="BLL\Entities\Question.cs" />
     <Compile Include="BLL\Entities\StudentInCourse.cs" />
     <Compile Include="BLL\Entity Manger\CourseManger.cs" />
+    <Compile Include="BLL\Entity Manger\InstructorInCourseManger.cs" />
     <Compile Include="BLL\Entity Manger\QuestionManger .cs" />
+    <Compile Include="BLL\Entity Manger\StudentCourseManger.cs" />
     <Compile Include="DAL\DBManager.cs" />
     <Compile Include="InstructorForms\AddQuestion.cs">
       <SubType>Form</SubType>
@@ -98,6 +103,12 @@
     </Compile>
     <Compile Include="InstructorForms\CouresFrom.Designer.cs">
       <DependentUpon>CouresFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorForms\CourseInstrctorFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorForms\CourseInstrctorFrom.Designer.cs">
+      <DependentUpon>CourseInstrctorFrom.cs</DependentUpon>
     </Compile>
     <Compile Include="InstructorForms\ExamGenerator.cs">
       <SubType>Form</SubType>
@@ -269,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorForms\CouresFrom.resx">
       <DependentUpon>CouresFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorForms\CourseInstrctorFrom.resx">
+      <DependentUpon>CourseInstrctorFrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorForms\ExamGenerator.resx">
       <DependentUpon>ExamGenerator.cs</DependentUpon>

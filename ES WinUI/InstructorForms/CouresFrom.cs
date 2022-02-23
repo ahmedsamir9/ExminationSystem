@@ -113,8 +113,7 @@ namespace Examination_System.InstructorForms
 
                     if (cid != -1)
                     {
-                        AddStudentToCourse addStudentToCourse = new AddStudentToCourse();
-                        addStudentToCourse.Show();
+                        new CourseInstrctorFrom() { CID = cid }.Show();
                         Hide();
                     }
 
@@ -127,7 +126,11 @@ namespace Examination_System.InstructorForms
                     }
                     break;
                 case 6:
-                    if (cid != -1) { }
+                    if (cid != -1) {
+                        AddStudentToCourse addStudentToCourse = new AddStudentToCourse() { CID = cid};
+                        addStudentToCourse.Show();
+                        Hide();
+                    }
                     break;
                 case 7:
                     if (cid != -1)
