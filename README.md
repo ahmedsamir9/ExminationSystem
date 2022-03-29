@@ -1,9 +1,7 @@
-# movies Land Android
+# Examination System 
 
-* sample movie app (single activity app) that show movies and actors using tmdb api
-## 🎥 Watch demo on [youtube](https://youtu.be/jPT40HjXRlI)
 ## 🧐 About
-* main purpose for building this project is to achieve Single source of truth(SSOT) principle(which is local Db) and handle all states for every screen
+* an examination system that help students to take exams and keep track their grades on stsyem after taking exams also the system has admin panel for help the admin to set exams , questions ,teachers and Courses 
 
 ## Features
 - [1] get popular ,toprated ,upcoming and playingnow movies
