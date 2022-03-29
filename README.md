@@ -36,5 +36,5 @@
 <img alt="Screen Shot 2020-09-04 at 2 48 55 PM" src="/img/image2.png">
 
 ## DataBase Diagram :
-<img alt="Screen Shot 2020-09-04 at 2 48 55 PM" src="/img/Db.png">
+<img alt="Screen Shot 2020-09-04 at 2 48 55 PM" src="/img/Db.PNG">
 
